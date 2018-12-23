@@ -132,9 +132,8 @@
                     parent: $(".page"), offset_top: $top,  recalc_every: 1
                 }).on("sticky_kit:stick", function(e) {
                     // Do something on stick
-                    //console.log("has stuck!", e.target);
                 }).on('sticky_kit:bottom', function(e) {
-    				 $('.title-page').addClass('opt');
+    				 $('.manifest .title-page, .about .title-page, .lyceum .title-page').addClass('opt');
   				});
             } else {
                 $('.page-menu').trigger("sticky_kit:detach");
@@ -374,8 +373,25 @@
         });
     }
 
+		/*
+	$('.masters-name').click(function(event) {
+  		event.preventDefault();
+		this.blur(); // Manually remove focus from clicked link.
+  		$.get(this.href, function(html) {
+    		$(html).appendTo('body').modal();
+  		});
+	});	
+		*/
+
+		$("div.page > div.page-sidebar > div.page-menu > a.sign").click(function (){
+			$('html, body').animate({
+				scrollTop: $("#formreq").offset().top-100
+			}, 800);
+		});		
 		
-		
+		if($(".wpcf7-acceptance input[type='checkbox']").is(':checked')){
+			$('.wpcf7-acceptance label').addClass('checked');
+		}
 		
 });	
 })(jQuery);

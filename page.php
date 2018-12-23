@@ -15,29 +15,27 @@
  * @version 1.0
  */
 
-get_header(); ?>
+get_header();
+?>
+<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+	<section class="fix-title <?php echo $post->post_name; ?>">
+		<div class="wrapper">
+			<div class="title-page">
+				<?php $num = '<b>'.get_field('number').'</b> ';?>
+				<?php the_title( '<h1>'.$num, '</h1>' ); ?>
+				<?php // <h1><b>1.1</b> Об институте</h1> ?>
+			</div>
+			<div class="page menu-reserve">
+				<div class="page-sidebar">
+				</div>
+				<div class="page-content page-main-text">
+					<?php the_content(); ?>
+				</div>
+			</div>
+		</div>
+	</section>
+<?php endwhile; endif; ?>
 
-<div class="wrap">
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main" role="main">
-
-			<?php
-			while ( have_posts() ) :
-				the_post();
-
-				get_template_part( 'template-parts/page/content', 'page' );
-
-				// If comments are open or we have at least one comment, load up the comment template.
-				if ( comments_open() || get_comments_number() ) :
-					comments_template();
-				endif;
-
-			endwhile; // End of the loop.
-			?>
-
-		</main><!-- #main -->
-	</div><!-- #primary -->
-</div><!-- .wrap -->
 
 <?php
 get_footer();

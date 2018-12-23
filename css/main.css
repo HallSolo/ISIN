@@ -1492,7 +1492,7 @@ video{
     margin: 0!important;
     box-shadow: none!important;
 }
-.politika input[type="checkbox"]:checked + label:after {
+.politika label.checked:after {
     background: url(../img/check-w.png) no-repeat center center;
 }
 .politika  label:after {
@@ -1572,7 +1572,11 @@ footer.grey  .form-row input, footer.grey  .form-row select, footer.violet  .for
 footer.grey .politika label:after, footer.violet .politika label:after, footer.blue .politika label:after,  footer.purple .politika label:after{
      border: 2px solid #000;
 }
+/*
 footer.grey .politika input[type="checkbox"]:checked + label:after, footer.violet .politika input[type="checkbox"]:checked + label:after, footer.blue .politika input[type="checkbox"]:checked + label:after, footer.purple .politika input[type="checkbox"]:checked + label:after{
+    background: url(../img/check.png) no-repeat center center;
+}*/
+footer.grey .politika label.checked:after, footer.violet .politika label.checked:after, footer.blue .politika label.checked:after, footer.purple .politika label.checked:after{
     background: url(../img/check.png) no-repeat center center;
 }
 footer.grey .form-row input::-webkit-input-placeholder, footer.violet .form-row input::-webkit-input-placeholder, footer.blue .form-row input::-webkit-input-placeholder, footer.grey .chosen-container-single .chosen-single span, footer.violet .chosen-container-single .chosen-single span, footer.blue .chosen-container-single .chosen-single span, footer.purple .chosen-container-single .chosen-single span, footer.grey .politika label, footer.violet .politika label ,footer.blue .politika label, footer.purple .politika label  {

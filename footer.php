@@ -15,13 +15,20 @@
 ?>
 
 	<?php /*	</div><!-- #content --> */ ?>
+<?php 
+$footer_bg_color = check_page_style('footer'); 
+if(is_array($footer_bg_color)) $footer_bg_color = $footer_bg_color['footer'];
 
-
-	<footer class="<?php echo check_page_style( basename(get_permalink()) )[1]; ?>">
+?>
+	<h2 style="font-size: 1px; color: transparent; line-height: 0px;"><span class="ez-toc-section" id="formreq">Заявка на обучение</span></h2>
+<?php // echo check_page_style( str_replace("/",NULL,$_SERVER['REQUEST_URI']))[1]; ?>
+	<footer class="<?php echo $footer_bg_color; ?>">
+	
 		<div class="wrapper">
 			
-			<?php //echo do_shortcode( '[contact-form-7 id="5" title="Контактная форма 1"]' ); ?>
-			
+			<?php echo do_shortcode( '[contact-form-7 id="5" title="Контактная форма 1"]' ); ?>
+	
+			<!--
 			<div class="form">
 				<div class="form-title">заявка на обучение</div>
 				<div class="form-content">
@@ -66,7 +73,7 @@
 					</div>
 				</div>
 			</div>
-
+			-->
 
 
 			<div class="sitemap">
@@ -83,10 +90,7 @@
 					<a class="footer-tel" href="tel:+78003010930"> +7 (800) 301-09-30</a>
 				</div>
 				<div class="footer-social">
-					<a href="#" class="fc">Facebook</a>
-					<a href="#" class="fc">Vkontakte</a>
-					<a href="#" class="fc">Instagram</a>
-					<a href="#" class="fc">Youtube</a>
+					<?php echo str_replace('<a','<a class="fc" ',strip_tags(wp_nav_menu( array( 'menu' => 3, 'container' => false, 'items_wrap' => '%3$s', 'depth' => 0, 'echo' => false ) ), '<a>' )); ?>
 				</div>
 				<div class="footer-search">
 					<a href="#"><i class="ico-search"></i></a>

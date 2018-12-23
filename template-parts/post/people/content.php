@@ -12,7 +12,7 @@
 
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+<article id="post-<?php the_ID(); ?> " <?php post_class(); ?>>
 
 			<div class="masters-details">
 				<div class="masters-details-sidebar">
@@ -21,7 +21,7 @@
 					</div>
 				</div>
 				<div class="masters-details-info">
-					<div class="close"></div>
+					<a href="#close-modal" class="close" rel="modal:close"></a>
 					<div class="masters-details-name"><?php the_title('<h1>', '</h1>'); ?></div>
 					<div class="masters-details-history">
 					<?php the_content(); ?>
@@ -34,9 +34,7 @@
             $connected = new WP_Query(array(
                 'connected_type' => 'events_to_people',
                 'connected_items' => $post,
-                'nopaging' => true,
-				'meta_query' => array(array('key' => 'date','value' => $datenow, 'compare' => '>=')),
-				'order'=>'DESC'
+                'nopaging' => true
             )); ?>
 
             <?php if ($connected->have_posts()): ?>
@@ -44,7 +42,11 @@
 					<div class="related">
 						<?php while ($connected->have_posts()) : $connected->the_post(); ?>
 
-                                    <?php get_template_part( 'template-parts/page/content-events' ); ?>
+                                    <?php
+									if($datenow <= get_field('date')){
+										get_template_part( 'template-parts/page/content-events' ); 
+									}
+									?>
 
                                 <?php
                             endwhile;

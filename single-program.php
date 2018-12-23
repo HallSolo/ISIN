@@ -1,6 +1,6 @@
 <?php
 /**
- * The template for displaying all single posts
+ * Template Name: program
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/#single-post
  *
@@ -9,8 +9,16 @@
  * @since 1.0
  * @version 1.0
  */
+$page_color = check_page_style( basename(get_permalink()) );
+if( $page_color[0] !== '' ){
+	add_filter('body_class', function($classes){
+		global $page_color;
+		return array( $page_color[0] );
+	});
+}
+get_header();
 
-get_header(); ?>
+?>
 
 <div class="wrap">
 	<div id="primary" class="content-area">

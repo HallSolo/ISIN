@@ -12,6 +12,13 @@
  * @version 1.0
  */
 
+add_filter('body_class', function($classes){
+	global $body_class_color;
+	return array( check_page_style('body') );
+});
+
+
+
 ?>
 <!DOCTYPE html>
 <html <?php language_attributes(); ?> class="no-js no-svg">
@@ -27,7 +34,7 @@
 <?php /* <div id="page" class="site"> */ ?>
     <!-- <a class="skip-link screen-reader-text" href="#content"><?php //_e( 'Skip to content', 'isin' ); ?></a> -->
 
-    <header>
+    <header<?php if($header_class = check_page_style('header')) echo ' class="'.$header_class.'"'; ?>>
 		<div class="menu-black">
             <?php if (has_nav_menu('top')) : ?>
 			<div class="wrapper">

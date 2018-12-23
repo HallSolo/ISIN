@@ -422,6 +422,7 @@ function isin_scripts() {
 	wp_enqueue_style( 'isin-style', get_theme_file_uri('/css/main.css') );
 	wp_enqueue_style( 'isin-style-media', get_theme_file_uri('/css/media.css') );
 	wp_enqueue_style( 'isin-style-chosen', get_theme_file_uri('/css/chosen.css') );
+	wp_enqueue_style( 'jquery-modal-style', get_template_directory_uri() .  '/assets/css/jquery.modal.min.css', array(), ' ' );
 	wp_enqueue_style( 'othermytheme-style', get_template_directory_uri() .  '/assets/css/style.css', array(), ' ' );
 	//wp_enqueue_style( 'mytheme-style', get_theme_file_uri('/css/style.css'), array(), '' );
 
@@ -469,6 +470,7 @@ function isin_scripts() {
 	wp_enqueue_script( 'jquery-chosen', get_theme_file_uri( '/assets/js/chosen.jquery.js' ), array( 'jquery' ), '', true );
 	wp_enqueue_script( 'isin-slick', get_theme_file_uri( '/assets/js/slick.min.js' ), array( 'jquery' ), '', true );
 	wp_enqueue_script( 'jquery-sticky', get_theme_file_uri( '/assets/js/jquery.sticky-kit.min.js' ), array( 'jquery' ), '2.1.2', true );
+	wp_enqueue_script( 'jquery-modal', get_theme_file_uri( '/assets/js/jquery.modal.min.js' ), array( 'jquery' ), '2.1.2', true );
 	wp_enqueue_script( 'isin-main', get_theme_file_uri( '/assets/js/main.js' ), array( 'jquery' ), '1.0', true );
 
 	wp_localize_script( 'isin-skip-link-focus-fix', 'isinScreenReaderText', $isin_l10n );
@@ -776,8 +778,8 @@ function my_connection_types() {
 	// Событие - факультет
 	p2p_register_connection_type( array(
 		'name' => 'laboratory_to_events',
-		'from' => 'laboratory',
-		'to' => 'events',
+		'from' => 'events',
+		'to' => 'laboratory',
 		'sortable' => 'any'
 	) );
 	
@@ -786,6 +788,14 @@ function my_connection_types() {
 		'name' => 'program_to_laboratory',
 		'from' => 'program',
 		'to' => 'laboratory',
+		'sortable' => 'any'
+	) );
+	
+	// Событие - факультет
+	p2p_register_connection_type( array(
+		'name' => 'program_to_events',
+		'from' => 'program',
+		'to' => 'events',
 		'sortable' => 'any'
 	) );
 	
@@ -812,7 +822,18 @@ function my_connection_types() {
 		'to' => 'people',
 		'sortable' => 'any'
 	) );
+	
+	p2p_register_connection_type( array(
+        'name' => 'event_to_lyceum',
+        'from' => 'page',
+        'to' => 'lyceum',
+        'sortable' => 'any'
+    ) );
+	
+	
+	
 }
+
 
 add_action( 'p2p_init', 'my_connection_types' );
 
@@ -828,31 +849,69 @@ add_action( 'p2p_init', 'my_connection_types' );
 
 
 
-function check_page_style($page=null){
+function check_page_style($name=null){
 /*
 grey
 violet
 blue
 beige
 purple
+darkblue
 red - только первым параметром
 */
 	$styles = array(
-		'about' => array('blue','blue'),
-		'manifest' => array('red','grey')
+		'about' => array('body'=>'blue','footer'=>'blue','header'=>''),
+		'manifest' => array('body'=>'red','footer'=>'grey','header'=>''),
+		'lyceum' => array('body'=>'purple','footer'=>'purple','header'=>''),
+		'program' => array('body'=>'beige','footer'=>'beige','header'=>''),
+		'events' => array('body'=>'grey','footer'=>'grey','header'=>'grey'),
+		'laboratory' => array('body'=>'violet','footer'=>'violet','header'=>'violet')
+		
 	);
 		
-	if(!$styles[$page])	return  array('grey','grey');
-	else return $styles[$page];
 	
+	 $pageu = str_replace("/",NULL,parse_url('https://'.$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'], PHP_URL_PATH));
+
+	if(!$styles[$pageu]){
+		return array('body'=>'grey','footer'=>'darkblue','header'=>'grey');
+	}else{
+		if($name) return $styles[$pageu][$name];
+		else return $styles[$pageu];
+	}
+	
+}
+
+
+class mainMenuWalker extends Walker_Nav_Menu {
+	function start_el(&$output, $item, $depth, $args) {
+
+		$attributesclass[] = 'dev-link';
+
+		if($_SERVER['REQUEST_URI'] == $item->url) $attributesclass[] = 'active';
+
+		$attributes = ' class="'.@implode(' ',$attributesclass).'" ';
+
+		// назначаем атрибуты a-элементу
+		$attributes.= !empty( $item->url ) ? ' href="' .esc_attr($item->url). '"' : '';
+		$item_output = $args->before;
+
+		// проверяем, на какой странице мы находимся
+		$current_url = (is_ssl()?'https://':'http://').$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];
+		$item_url = esc_attr( $item->url );
+		if ( $item_url != $current_url ) $item_output.= '<a'. $attributes .'>'.$item->title.'</a>';
+		else $item_output.= $item->title;
+
+		// заканчиваем вывод элемента
+		$item_output.= $args->after;
+		$output.= apply_filters( 'walker_nav_menu_start_el', $item_output, $item, $depth, $args );
+	}			
 }
 
 
 
 
 
-
-
+add_post_type_support( 'page', array('excerpt') );
 
 
 

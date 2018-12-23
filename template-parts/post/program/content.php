@@ -46,7 +46,7 @@
                             endif;
                         } ?>
                     </div>
-                    <a class="sign" href="#">Записаться на обучение</a>
+                    <a class="sign" href="#formreq">Записаться на обучение</a>
                 </div>
             </div>
             <!-- .info-program -->
@@ -62,7 +62,8 @@
                             <h3 class="with-line">О программе</h3>
                             <?php
                             /* translators: %s: Name of current post */
-                            echo $text;
+							
+                            echo apply_filters('the_content', $text);
                             ?>
                         </div>
                     <?php endif; ?>
@@ -125,10 +126,37 @@
                             echo apply_filters('the_content', $post->post_content);
                             ?>
                         </div>
-                    <?php endif; ?>
+                    <?php 
+					wp_reset_postdata();
+					endif; ?>
                 </div>
             </div><!-- .main-content -->
         </div>
+		<?php
+		$now = new DateTime();
+	    $datenow = $now->format('Y.m.d H:i');
+        $connected = new WP_Query(array(
+                'connected_type' => 'program_to_events',
+                'connected_items' => $post,
+                'nopaging' => true
+        )); 
+	?>
+	<?php if ($connected->have_posts()): ?>
+	<h3 class="title-page-small">События</h3>
+		<div class="related">
+			<?php while ($connected->have_posts()) : $connected->the_post(); ?>
+				<?php
+					if($datenow <= get_field('date')){
+						get_template_part( 'template-parts/page/content-events' ); 
+					}
+				?>
+			<?php
+				endwhile;
+                wp_reset_postdata();
+            ?>
+		</div>
+		<a href="/events/" class="related-arrow"></a>	
+	<?php endif; ?>
     </div>
 
 

@@ -21,9 +21,7 @@ get_header(); ?>
 
     <?php if ( have_posts() ) : ?>
         <header class="header">
-            <?php
-            post_type_archive_title( '<h1 class="page-title">', '</h1>' );
-            ?>
+            <?php echo '<h1 class="page-title">'.post_type_archive_title( null, false ).'</h1>'; ?>
         </header><!-- .page-header -->
     <?php endif; ?>
 

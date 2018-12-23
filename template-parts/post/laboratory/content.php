@@ -158,6 +158,31 @@
             </div>
         </div>
     </div><!-- .main-content -->
+	<?php
+		$now = new DateTime();
+	    $datenow = $now->format('Y.m.d H:i');
+        $connected = new WP_Query(array(
+                'connected_type' => 'laboratory_to_events',
+                'connected_items' => $post,
+                'nopaging' => true
+        )); 
+	?>
+	<?php if ($connected->have_posts()): ?>
+	<h3 class="title-page-small">События</h3>
+		<div class="related">
+			<?php while ($connected->have_posts()) : $connected->the_post(); ?>
+				<?php
+					if($datenow <= get_field('date')){
+						get_template_part( 'template-parts/page/content-events' ); 
+					}
+				?>
+			<?php
+				endwhile;
+                wp_reset_postdata();
+            ?>
+		</div>
+		<a href="/events/" class="related-arrow"></a>	
+	<?php endif; ?>
     </div><!-- .wrapper -->
 
 </article><!-- #post-## -->

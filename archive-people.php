@@ -14,18 +14,14 @@
  * @since 1.0
  * @version 1.0
  */
-
 get_header(); ?>
 
     <main id="main"  class="lektor-page" role="main">
         <div class="wrapper">
 
             <?php if (have_posts()) : ?>
-                <?php
-			    $num = '<i>1.3</i> ';
-                post_type_archive_title('<h2 class="title">'.$num, '</h2>');
-                ?>
-            <?php endif; ?>
+				<?php echo '<h2 class="title">'.post_type_archive_title('<i>1.3</i> ', false).'</h2>'; ?>
+			<?php endif; ?>
 
 					<div class="masters">
 

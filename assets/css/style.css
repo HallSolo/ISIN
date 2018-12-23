@@ -75,4 +75,6 @@ ul.sitemap-col {
     margin-right: 60px;
 }
 
-
+.blocker {
+	z-index: 10;
+}

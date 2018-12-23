@@ -14,18 +14,14 @@
  * @since 1.0
  * @version 1.0
  */
-
 get_header(); ?>
 
-    <main id="main"  class="violet page-laborat" role="main">
+    <section id="main"  class="violet page-laborat" role="main">
         <div class="wrapper">
 
             <?php if (have_posts()) : ?>
-                <?php
-                post_type_archive_title('<h2 class="title">', '</h2>');
-                ?>
+				<?php echo '<h2 class="title">'.post_type_archive_title("<i>2.3</i> ", false).'</h2>'; ?>			
             <?php endif; ?>
-
                 <div class="laborat">
                     <div class="row">
 
@@ -46,7 +42,7 @@ get_header(); ?>
                     </div>
                 </div><!-- .laborat -->
         </div><!-- .wrapper -->
-    </main>
+    </section>
 
 <?php
 get_footer();

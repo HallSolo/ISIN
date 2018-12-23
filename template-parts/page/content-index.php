@@ -13,7 +13,19 @@ wp_enqueue_style( 'slider-theme', 'https://kenwheeler.github.io/slick/slick/slic
                     <?php
 	                $now = new DateTime();
 	                $datenow = $now->format('Y.m.d H:i');
-	                $event = new WP_Query( array( 'post_type' => 'events', 'meta_query' => array(array('key' => 'date','value' => $datenow, 'compare' => '>=')),'order'=>'DESC') );
+					$event = new WP_Query(array(
+					'post_type'			=> 'events',
+					'meta_query' 		=> array(
+						array(
+	        				'key'			=> 'date',
+	        				'compare'		=> '>=',
+	        				'value'			=> $datenow,
+	        				'type'			=> 'DATETIME'
+	    				)
+    				),
+					'order'             => 'DESC'
+					));
+	                //$event = new WP_Query( array( 'post_type' => 'events', 'meta_query' => array(array('key' => 'date','value' => $datenow, 'compare' => '>=')),'order'=>'DESC') );
 				//$event = new WP_Query( array( 'post_type' => 'events', 'order'=>'DESC') );
 				//var_dump($event);
 	                if ($event->have_posts() ) :

@@ -21,9 +21,7 @@ get_header(); ?>
         <div class="wrapper">
 
             <?php if (have_posts()) : ?>
-                <?php
-                post_type_archive_title('<h2 class="title">', '</h2>');
-                ?>
+				<?php echo '<h2 class="title">'.post_type_archive_title("<i>2.4</i> ", false).'</h2>'; ?>
             <?php endif; ?>
 
                 <div class="laborat">
