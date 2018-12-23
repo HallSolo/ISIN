@@ -14,7 +14,7 @@
 
 ?>
 
-		</div><!-- #content -->
+	<?php /*	</div><!-- #content --> */ ?>
 
 
 	<footer class="<?php echo check_page_style( basename(get_permalink()) )[1]; ?>">
@@ -130,9 +130,12 @@
 
 
 
-
+<?php
+/*
 	</div><!-- .site-content-contain -->
 </div><!-- #page -->
+*/
+?>
 <?php wp_footer(); ?>
 
 </body>

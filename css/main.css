@@ -199,7 +199,7 @@ header .wrapper{
     height: 100%;
 }
 header.main{
-    position: relative;
+    position: inherit;
 }
 header.fixed{
     position: fixed;
@@ -336,7 +336,7 @@ header.fixed.violet{
     flex-wrap: wrap;
 }
 .header-menu-col{
-    /*width: 28%;*/
+    /* width: 28%; */
     font-family: 'GoshaSans-Regular';
     font-size: 14px;
     text-transform: uppercase;
@@ -379,7 +379,7 @@ header.fixed.violet{
     font-weight: 300;
     padding: 10px 0 17px;
 }
-.manifest .title-page, .about .title-page{
+.manifest .title-page, .about .title-page, .lyceum .title-page{
     position: relative;
     display: block;
     height: 131px;
@@ -390,16 +390,14 @@ header.fixed.violet{
     -webkit-transform: translateZ(0);
     transform: translateZ(0);
 }
-
 .manifest .title-page h1, .about .title-page h1, .lyceum .title-page h1{
-
     -webkit-transition: all .2s ease-in;
     -o-transition: all .2s ease-in;
     transition: all .1s ease-in;
     position: fixed;
     top: 107px;
 }
-.manifest  .title-page h1 b, .about .title-page h1 b{
+.manifest  .title-page h1 b, .about .title-page h1 b, .lyceum .title-page h1 b{
     -webkit-transition: all .2s ease-in;
     -o-transition: all .2s ease-in;
     transition: all .1s ease-in;
@@ -906,7 +904,7 @@ label[for="politika"].error{
     width: 28%;
     padding-top: 50px;
 }
-.about .page-sidebar, .manifest .page-sidebar {
+.about .page-sidebar, .manifest .page-sidebar,  .lyceum .page-sidebar  {
     padding-top: 40px;
 }
 .about .page-menu.is_stuck, .manifest .page-menu.is_stuck {
@@ -921,11 +919,35 @@ label[for="politika"].error{
     -ms-flex-direction: column;
     flex-direction: column;
 }
+.page-video{
+    margin-bottom: 40px;
+}
+video{
+    width: 100%;
+}
 .page-col-lab{
     text-decoration: none;
     font-size: 36px;
     font-family: 'PragmaticaC';/*   заменить на Unica */
     color: #000;
+}
+.lyceum-col .page-col-lab{
+    font-size: 36px;
+    font-family: 'PragmaticaLightC';
+    color: #000;
+    text-transform: lowercase;
+}
+.lyceum-con{
+    font-size: 18px;
+    font-family: 'PragmaticaLightC';
+    font-weight: 700;
+}
+.lyceum-col .page-col h3::before {
+    top: 23px;
+}
+.lyceum-col .page-col-lab::after {
+    background: url(../img/down-pur.png) no-repeat 0 0;
+    margin: 5px 20px;
 }
 .page-col-lab:hover, .page-col-lab:active{
     text-decoration: underline;
@@ -988,6 +1010,14 @@ label[for="politika"].error{
     font-style: normal;
     font-size: 38px;
     font-family: 'GoshaSans-Regular';
+}
+.title-page h1 b.full-height{
+    height: 187px;
+    display: inline-block;
+    float: left;
+    padding-top: 28px;
+    padding-right: 10px;
+    color: #000;
 }
 .about .title-page h1 b{
     color: #000000;
@@ -1102,6 +1132,9 @@ label[for="politika"].error{
     font-size: 36px;
     font-family: 'PragmaticaLightC-Bold';
 }
+.page-col p.date-name a{
+    color: #000;
+}
 .date-count{
     font-size: 18px;
     font-family: 'PragmaticaC'; /*   заменить на Unica */
@@ -1188,6 +1221,10 @@ label[for="politika"].error{
 .page-sidebar-social{
     margin: 40px 0;
 }
+.lyceum .page-sidebar-social{
+    margin: 0;
+    padding-bottom: 60px;
+}
 .page-social a{
     text-decoration: none;
     color: #000;
@@ -1195,12 +1232,21 @@ label[for="politika"].error{
     font-family: 'PragmaticaC'; /*   заменить на Unica */
     margin-right: 15px;
 }
+.page-main-text a{
+    margin: 0 ;
+}
 .page-social a:hover{
     text-decoration: underline;
 }
 .page-doc li{
     font-size: 18px;
     font-family: 'PragmaticaC'; /*   заменить на Unica */
+}
+.lyceum-h3 {
+    font-size: 21px;
+    font-family: 'GoshaSans-Regular';
+    text-transform: uppercase;
+    margin-bottom: 20px;
 }
 .sitemap{
     display: -webkit-box;
@@ -1247,7 +1293,10 @@ label[for="politika"].error{
     color: #000;
     font-weight: 300;
 }
-
+.lyceum .title-page h1 b{
+    color: #7a7ab7;
+    font-weight: 300;
+}
 .class .left-slide,.class .right-slide{
     -webkit-transform: translate(0, -50%);
     -ms-transform: translate(0, -50%);

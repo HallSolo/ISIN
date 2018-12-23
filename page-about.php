@@ -31,6 +31,8 @@ get_header();
 	preg_match($preg, $navlist, $matches);
 	$navlist = $matches[1];
 
+/*
+
 wp_deregister_script( 'js-cookie' );
 wp_deregister_script( 'jquery-smooth-scroll' );
 wp_deregister_script( 'jquery-sticky-kit' );
@@ -39,11 +41,13 @@ wp_deregister_script( 'ez-toc-js' );
 
 define( 'EZ_TOC_URL', "https://make.mi.university/wp-content/plugins/easy-table-of-contents/" );
 wp_register_script( 'js-cookie', EZ_TOC_URL . "vendor/js-cookie/js.cookie.js", array(), '2.0.3', TRUE );
-wp_register_script( 'jquery-smooth-scroll', EZ_TOC_URL . "vendor/smooth-scroll/jquery.smooth-scroll$min.js", array( 'jquery' ), '1.5.5', TRUE );
-wp_register_script( 'jquery-sticky-kit', EZ_TOC_URL . "vendor/sticky-kit/jquery.sticky-kit$min.js", array( 'jquery' ), '1.9.2', TRUE );
-wp_register_script( 'jquery-waypoints', EZ_TOC_URL . "vendor/waypoints/jquery.waypoints$min.js", array( 'jquery' ), '1.9.2', TRUE );
+wp_register_script( 'jquery-smooth-scroll', EZ_TOC_URL . "vendor/smooth-scroll/jquery.smooth-scroll.min.js", array( 'jquery' ), '1.5.5', TRUE );
+wp_register_script( 'jquery-sticky-kit', EZ_TOC_URL . "vendor/sticky-kit/jquery.sticky-kit.min.js", array( 'jquery' ), '1.9.2', TRUE );
+wp_register_script( 'jquery-waypoints', EZ_TOC_URL . "vendor/waypoints/jquery.waypoints.min.js", array( 'jquery' ), '1.9.2', TRUE );
 
 wp_register_script( 'ez-toc-js', get_template_directory_uri() . "/assets/js/front.js", array( 'jquery-smooth-scroll', 'js-cookie', 'jquery-sticky-kit', 'jquery-waypoints' ), '1.7', TRUE );
+
+*/
 
 $js_vars = array();
 $js_vars['smooth_scroll'] = TRUE;
@@ -58,7 +62,7 @@ wp_enqueue_style( 'slider', get_template_directory_uri() . '/css/slick.css', fal
 wp_enqueue_style( 'slider-theme', 'https://kenwheeler.github.io/slick/slick/slick-theme.css', false, null, 'all');
 
 ?>
-	<section class="fix-title <?php echo $post->post_name; ?> page-<?php the_ID(); ?>">
+	<section class="fix-title <?php echo $post->post_name; ?>">
 		<div class="wrapper">
 			<div class="title-page">
 				<?php $num = '<b>'.get_field('number').'</b> ';?>

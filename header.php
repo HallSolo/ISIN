@@ -24,16 +24,10 @@
 </head>
 
 <body <?php body_class(); ?>>
-<div id="page" class="site">
+<?php /* <div id="page" class="site"> */ ?>
     <!-- <a class="skip-link screen-reader-text" href="#content"><?php //_e( 'Skip to content', 'isin' ); ?></a> -->
 
-    <header id="masthead" class="site-header" role="banner">
-
-		
-<style>
-
-</style>
-		
+    <header>
 		<div class="menu-black">
             <?php if (has_nav_menu('top')) : ?>
 			<div class="wrapper">
@@ -78,7 +72,7 @@
 		
 		
 
-    </header><!-- #masthead -->
+    </header>
 
     <section class="social-modal">
         <div class="wrapper">
@@ -95,6 +89,8 @@
         </div>
     </section>
 	
-
+<?php
+	/*
 	<div class="site-content-contain">
 		<div id="content" class="site-content">
+*/ ?>		

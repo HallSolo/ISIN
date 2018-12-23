@@ -56,7 +56,7 @@
                 if ($('div').is('.related')){
                     $v1 = $('.related').offset().top - 400;
                 } else {
-                    $v1 = $('footer').offset().top - 140;
+                    $v1 = $('footer').offset().top - 200;
                     console.log(2)
                 }
                 $h = $nav.offset().top - 107 ;
@@ -70,7 +70,7 @@
                         $nav.removeClass('fixed-title');
                         $page.addClass('for-title-fixed');
                     }
-                    if ($window.scrollTop() > $v1) {
+                    if ($window.scrollTop()  > $v1 ) {
                         $nav.addClass('opt');
                     } else{
                         $nav.removeClass('opt');
@@ -84,6 +84,7 @@
         } else{
             $(window).off(animate_title());
         }
+		
     }
 
     /* фиксация левого блока при скорлле */
@@ -131,7 +132,10 @@
                     parent: $(".page"), offset_top: $top,  recalc_every: 1
                 }).on("sticky_kit:stick", function(e) {
                     // Do something on stick
-                });
+                    //console.log("has stuck!", e.target);
+                }).on('sticky_kit:bottom', function(e) {
+    				 $('.title-page').addClass('opt');
+  				});
             } else {
                 $('.page-menu').trigger("sticky_kit:detach");
             }

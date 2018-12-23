@@ -1,32 +1,49 @@
 <?php
-/**
- * The template for displaying all pages
- *
- * This is the template that displays all pages by default.
- * Please note that this is the WordPress construct of pages
- * and that other 'pages' on your WordPress site may use a
- * different template.
- *
- * @link https://codex.wordpress.org/Template_Hierarchy
+/*
+ * Template Name: eventspage
+ * Template Post Type: page
  *
  * @package WordPress
  * @subpackage Twenty_Seventeen
  * @since 1.0
  * @version 1.0
  */
-
+	
+	add_filter('body_class', function($classes){
+		return array( 'archive','post-type-archive','post-type-archive-events','logged-in','wp-custom-logo','hfeed','has-header-image','page-one-column','colors-light' );
+	});
 get_header(); ?>
+
+
+
+
+
+
+
+
+<?php
+
+$now = new DateTime();
+                    $datenow = $now->format('Y.m.d H:i');
+                    $event = new WP_Query( array( 'post_type' => 'events', 'meta_query' => array(array('key' => 'date','value' => $datenow, 'compare' => '>=')),'order'=>'DESC') );
+
+print_r($event);
+
+?>
+
+
+
+
 
     <main id="main"  class="dev grey" role="main">
         <div class="wrapper">
 
             <?php if (have_posts()) : ?>
-                <?php echo '<h2 class="title">'.post_type_archive_title('<i>3.1</i> ', false).'</h2>'; ?>
+                <?php
+			    $num = '<i>3.1</i> ';
+                post_type_archive_title('<h2 class="title">'.$num, '</h2>');
+                ?>
             <?php endif; ?>
-			
-			<div class="dev-nav">
-			<?php echo str_replace('<a','<a class="dev-link" ',strip_tags(wp_nav_menu( array( 'menu' => 16, 'container' => false, 'items_wrap' => '%3$s', 'depth' => 0, 'echo' => false ) ), '<a>' )); ?>
-			</div>
 
 					<div class="related">
 

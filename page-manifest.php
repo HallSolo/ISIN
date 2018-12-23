@@ -31,6 +31,8 @@ get_header();
 	preg_match($preg, $navlist, $matches);
 	$navlist = $matches[1];
 
+/*
+
 wp_deregister_script( 'js-cookie' );
 wp_deregister_script( 'jquery-smooth-scroll' );
 wp_deregister_script( 'jquery-sticky-kit' );
@@ -44,6 +46,8 @@ wp_register_script( 'jquery-sticky-kit', EZ_TOC_URL . "vendor/sticky-kit/jquery.
 wp_register_script( 'jquery-waypoints', EZ_TOC_URL . "vendor/waypoints/jquery.waypoints$min.js", array( 'jquery' ), '1.9.2', TRUE );
 
 wp_register_script( 'ez-toc-js', get_template_directory_uri() . "/assets/js/front.js", array( 'jquery-smooth-scroll', 'js-cookie', 'jquery-sticky-kit', 'jquery-waypoints' ), '1.7', TRUE );
+
+*/
 
 $js_vars = array();
 $js_vars['smooth_scroll'] = TRUE;

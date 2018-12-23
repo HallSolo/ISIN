@@ -29,13 +29,17 @@
 					
 					<?php
             // Find connected pages
+            $now = new DateTime();
+	        $datenow = $now->format('Y.m.d H:i');
             $connected = new WP_Query(array(
                 'connected_type' => 'events_to_people',
                 'connected_items' => $post,
-                'nopaging' => true
+                'nopaging' => true,
+				'meta_query' => array(array('key' => 'date','value' => $datenow, 'compare' => '>=')),
+				'order'=>'DESC'
             )); ?>
 
-            <?php if (!empty($connected)): ?>
+            <?php if ($connected->have_posts()): ?>
 					<h3 class="title-page-small">События</h3>
 					<div class="related">
 						<?php while ($connected->have_posts()) : $connected->the_post(); ?>

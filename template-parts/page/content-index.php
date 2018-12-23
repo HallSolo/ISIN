@@ -12,7 +12,7 @@ wp_enqueue_style( 'slider-theme', 'https://kenwheeler.github.io/slick/slick/slic
 			<div class="slider clases">
                     <?php
 	                $now = new DateTime();
-	                $datenow = $now->format('y.m.d H:i');
+	                $datenow = $now->format('Y.m.d H:i');
 	                $event = new WP_Query( array( 'post_type' => 'events', 'meta_query' => array(array('key' => 'date','value' => $datenow, 'compare' => '>=')),'order'=>'DESC') );
 				//$event = new WP_Query( array( 'post_type' => 'events', 'order'=>'DESC') );
 				//var_dump($event);
