@@ -1,0 +1,92 @@
+@font-face {
+    font-family: 'Dala Floda Roman No 2';
+    src: url('../fonts/DalaFloda/Dala Floda-Roman No 2-Web.eot');
+    src: url('../fonts/DalaFloda/Dala Floda-Roman No 2-Web.eot#iefix') format('embedded-opentype'),
+        url('../fonts/DalaFloda/Dala Floda-Roman No 2-Web.woff2') format('woff2'),
+        url('../fonts/DalaFloda/Dala Floda-Roman No 2-Web.woff') format('woff'),
+        url('../fonts/DalaFloda/Dala Floda-Roman No 2-Web.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'GoshaSans-Bold';
+    src: url('../fonts/GoshaSans/GoshaSans-Bold.otf') format("opentype");
+}
+@font-face {
+    font-family: 'GoshaSans-Regular';
+    src: url("../fonts/GoshaSans/GoshaSans-Regular.eot"); /* IE9 Compat Modes */
+    src: url("../fonts/GoshaSans/GoshaSans-Regular.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
+        url('../fonts/GoshaSans/GoshaSans-Regular.woff2') format('woff2'),
+        url("../fonts/GoshaSans/GoshaSans-Regular.woff") format("woff"), /* Modern Browsers */
+        url("../fonts/GoshaSans/GoshaSans-Regular.ttf")  format("truetype"); /* Safari, Android, iOS */
+    font-style: normal;
+}
+@font-face {
+    font-family: 'PragmaticaC';
+    src: url("../fonts/Pragmatica/PragmaticaC.eot"); /* IE9 Compat Modes */
+    src: url("../fonts/Pragmatica/PragmaticaC.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
+        url('../fonts/Pragmatica/PragmaticaC.woff2') format('woff2'),
+        url("../fonts/Pragmatica/PragmaticaC.woff") format("woff"), /* Modern Browsers */
+        url("../fonts/Pragmatica/PragmaticaC.ttf")  format("truetype"); /* Safari, Android, iOS */
+    font-style: normal;
+}
+@font-face {
+    font-family: 'PragmaticaC-Bold';
+    src: url('../fonts/Pragmatica/PragmaticaC-Bold.otf') format("opentype");
+}
+@font-face {
+    font-family: 'PragmaticaC-BoldItalic';
+    src: url('../fonts/Pragmatica/PragmaticaC-BoldItalic.otf') format("opentype");
+}
+@font-face {
+    font-family: 'PragmaticaC-Italic';
+    src: url('../fonts/Pragmatica/PragmaticaC-Italic.otf') format("opentype");
+}
+@font-face {
+    font-family: 'PragmaticaCondC';
+    src: url('../fonts/Pragmatica/PragmaticaCondC.otf') format("opentype");
+}
+@font-face {
+    font-family: 'PragmaticaCondC-Bold';
+    src: url('../fonts/Pragmatica/PragmaticaCondC-Bold.otf') format("opentype");
+}
+@font-face {
+    font-family: 'PragmaticaLightC';
+    src: url("../fonts/Pragmatica/PragmaticaLightC.eot"); /* IE9 Compat Modes */
+    src: url("../fonts/Pragmatica/PragmaticaLightC.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
+        url('../fonts/Pragmatica/PragmaticaLightC.woff2') format('woff2'),
+        url("../fonts/Pragmatica/PragmaticaLightC.woff") format("woff"), /* Modern Browsers */
+        url("../fonts/Pragmatica/PragmaticaLightC.ttf")  format("truetype"); /* Safari, Android, iOS */
+    font-style: normal;
+}
+@font-face {
+    font-family: 'PragmaticaLightC-Bold';
+    src: url('../fonts/Pragmatica/PragmaticaLightC-Bold.otf') format("opentype");
+}
+@font-face {
+    font-family: 'PragmaticaShadowC';
+    src: url('../fonts/Pragmatica/PragmaticaShadowC.otf') format("opentype");
+}
+@font-face {
+    font-family: 'PragmaticaShadowC-Italic';
+    src: url('../fonts/Pragmatica/PragmaticaShadowC-Italic.otf') format("opentype");
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

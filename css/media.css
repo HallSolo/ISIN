@@ -1,0 +1,886 @@
+@media only screen and (max-width : 1280px) {
+    html, body{
+        overflow-x:hidden!important;
+    }
+    .wrapper {
+        max-width: 100%;
+        padding: 0 20px;
+    }
+    .wrapper.show{
+        padding: 0;
+    }
+    .masters-details {
+        width: 98%;
+    }
+    .parallax {
+        height: 1220px;
+        background-size: contain;
+    }
+    .parallax p {
+        margin-top: 94px;
+        font-size: 30px;
+    }
+    .stydy-item, .laborat-item, .additional-item {
+        width: 48%;
+    }
+    .masters-item {
+        width: 33%;
+    }
+    .header-menu-col {
+       /* width: 26%; */
+    }
+    .sitemap-col h3 {
+        white-space: nowrap;
+    }
+    .related-photo img, .page-cont-img img{
+        width: 100%;
+        height: auto;
+    }
+    .related-photo {
+        height: auto;
+    }
+    .related-info{
+        margin-top: 10px;
+    }
+    header .wrapper{
+        padding: 0 10px;
+        height: 100%;
+    }
+    .page-content {
+        padding-top: 10px;
+    }
+    .header-content {
+        padding: 20px 0;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        height: 100%;
+    }
+    .header-logo {
+        padding-top: 7px;
+    }
+    .header-content.show {
+
+    }
+    header.show, body.red header.show{
+        -webkit-box-shadow: none;
+        box-shadow: none;
+        -webkit-transition: none;
+        -o-transition: none;
+        transition: none;
+    }
+    .page-col-lab, .lyceum-col .page-col-lab {
+        font-size: 21px;
+    }
+    .teachers-photo {
+        margin-right: 29px;
+    }
+    .social-var{
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+    }
+    .page-sidebar-logo img{
+        width: 100%;
+        height: auto;
+    }
+    body.main {
+        padding-right: inherit;
+    }
+    .social-con{
+        width: auto;
+    }
+    .header-menu .footer-search a {
+        right: 0;
+        top: 0;
+    }
+    .chosen-container{
+        width: 100%!important;
+    }
+    .form-row select {
+        padding-left: 0;
+    }
+    .politika, .success-form{
+        width: 78%;
+    }
+    .header-menu .wrapper {
+        padding: 0;
+    }
+    video{
+        width: 100%;
+    }
+    .form-row select{
+        border-bottom: 2px solid #000;
+    }
+    .form-row.error select{
+        border-bottom: 2px solid #ff4848;
+    }
+}
+@media screen and (min-width: 1024px) and (max-width: 1279px) {
+    .page-sidebar .page-menu, .page-thumb {
+        height: auto;
+    }
+    .title-page h1 {
+        font-size: 60px;
+    }
+    .title-page p {
+        font-size: 27px;
+    }
+    .stady-title, .laborat-title, .additional-title, .related-name, .dev .related-name{
+        font-size: 26px;
+        margin-bottom: 15px;
+    }
+    .laborat-item p, .additional-item p, .related-decpr{
+        font-size: 16px;
+    }
+    .teachers-item {
+        padding-right: 0;
+    }
+    .teachers-photo img{
+        height: 100%;
+    }
+    .title-page, .title-page-small, .related{
+        padding: 0 ;
+    }
+    .page{
+        padding: 0 20px 30px;
+    }
+    .related-arrow{
+        margin-left: 20px;
+    }
+    .sign{
+        font-size: 16px;
+        display: block;
+        width: 100%;
+        text-align: center;
+        margin-top: 20px;
+        padding: 9px 0;
+    }
+    .page-main-text {
+        font-size: 23px;
+    }
+    .parallax-arrow{
+        margin-bottom: 50px;
+    }
+    .page-content.kurs {
+        width: 69%;
+    }
+    .stady-small {
+        margin-top: 0;
+    }
+    .about .page-sidebar, .manifest .page-sidebar, .lyceum .page-sidebar  {
+        padding-top: 0;
+    }
+    .title-page h1 b.full-height{
+        padding-top: 15px;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    .page-thumb {
+        height: auto;
+        padding-top: 30px;
+    }
+    .page-sidebar .page-menu, .page-thumb {
+        height: auto;
+    }
+    .title-page h1 b.full-height{
+        padding-top: 0;
+        height: 146px;
+    }
+    .page-sidebar .page-menu{
+        padding-top: 0;
+    }
+    .title-page.fixed-title h1 {
+        font-size: 36px;
+    }
+    .page-sidebar-social{
+        margin: 0 0 10px;
+    }
+    .title-page h1 {
+        font-size: 50px;
+        line-height: 1;
+    }
+    .title-page p {
+        font-size: 27px;
+    }
+    .stady-title, .laborat-title, .additional-title, .related-name, .dev .related-name{
+        font-size: 19px;
+        margin-bottom: 15px;
+    }
+    .laborat-item p, .additional-item p, .related-decpr{
+        font-size: 16px;
+    }
+    .page-col p {
+        padding-right: 10px;
+    }
+    .stady-title, .laborat-title, .additional-title, .related-name{
+        padding-right: 15px;
+    }
+    .laborat-title:after, .additional-title:after, .related-name:after, .page-col-lab::after{
+        margin: 0 10px;
+    }
+    .page-sidebar-row {
+        font-size: 14px;
+    }
+    .page-col p.date-name{
+        font-size: 21px;
+    }
+    .teachers{
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    }
+    .teachers-item{
+        width: 49%;
+        padding-right: 10px;
+        margin-bottom: 15px;
+    }
+    .page-col {
+        padding-left: 58px;
+    }
+    .title-page, .title-page-small, .related{
+        padding: 0 20px;
+    }
+    .page{
+        padding: 0 0 30px;
+    }
+    .related-arrow{
+        margin-left: 20px;
+    }
+    .sign{
+        font-size: 11px;
+        display: block;
+        width: 100%;
+        text-align: center;
+        padding: 9px 0;
+    }
+    .header-menu-col{
+        margin-right: 51px;
+    }
+    .masters-details-info {
+        padding: 0 20px 30px 21px;
+    }
+    .title-page, .title-page-small, .related{
+        padding-left: 0;
+    }
+    .related-photo {
+        height: auto;
+    }
+    .masters-details-history {
+        padding-bottom: 10px;
+    }
+    .masters-details .related{
+        padding-right: 0;
+    }
+    .page-main-text {
+        font-size: 23px;
+    }
+    .parallax{
+        height: auto;
+        background-size: contain;
+    }
+    .parallax h1{
+        margin: 134px 0 0;
+        font-size: 60px;
+        width: 60%;
+    }
+    .parallax-arrow{
+        margin-bottom: 50px;
+    }
+    .slider-title {
+        font-size: 31px;
+    }
+    .footer-social {
+        margin-left: 49px;
+    }
+    .parallax-arrow{
+        margin-bottom: 50px;
+    }
+    .page-content.kurs {
+        width: 69%;
+    }
+    .stydy-item{
+        margin-right: 21px;
+        width: 47%;
+    }
+    .page-social{
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+    }
+    .header-menu-col h3, .header-menu-col a {
+        font-size: 18px;
+    }
+    .title {
+        font-size: 56px;
+    }
+    .stady-small {
+        margin-top: 0;
+    }
+    .about .page-sidebar, .manifest .page-sidebar, .lyceum .page-sidebar  {
+        padding-top: 0;
+    }
+}
+
+@media only screen and (max-width : 767px) {
+    body {
+        padding-top: 0;
+    }
+    header{
+        position: relative;
+        height: 81px;
+    }
+    .title-page h1 b.full-height {
+        padding-top: 0;
+        height: 150px;
+    }
+    .lyceum .page-sidebar-social {
+        padding-bottom: 20px;
+    }
+    .manifest .title-page h1, .about .title-page h1, .lyceum .title-page h1{
+        position: initial;
+        top: initial;
+    }
+    .manifest .title-page, .about .title-page, .lyceum .title-page{
+        height: auto;
+        min-height: auto;
+    }
+    .stady-small{
+        margin-top: 0;
+        font-size: 14px;
+    }
+    .title.main {
+        margin: 35px 0 0;
+        padding-bottom: 0;
+    }
+    .parallax h1{
+        width: 100%;
+        margin: 103px 0 50px;
+        margin: 33px 0 50px;
+        font-size: 30px;
+        padding-left: 52px;
+    }
+    .parallax{
+        height: auto;
+        background-size: contain;
+        background-attachment: inherit;
+    }
+    .parallax h1::before {
+        top: 15px;
+        width: 37px;
+    }
+    .header-logo{
+        padding-left: 0;
+    }
+    .header-social, .header-lang{
+        margin-right: 13px;
+    }
+    .header-logo img{
+        height: 40px;
+    }
+    .header-nav{
+        padding-right: 0;
+    }
+    .header-content.show{
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    .header-menu-map {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+    }
+    .header-menu-col{
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    .header-burger .burger{
+        -webkit-transform: scale(.7);
+        -ms-transform: scale(.7);
+        transform: scale(.7);
+    }
+    .header-menu {
+        padding: 0 15px 20px 15px;
+    }
+    .slider-photo, .slider-description{
+        width: 100%;
+        max-width: 100%;
+        padding: 0 38px;
+    }
+    .slider-data span {
+        font-size: 14px;
+    }
+    .slider-title {
+        font-size: 23px;
+        line-height: 1;
+        margin: 10px 0;
+    }
+    .slider-arrow{
+        position: inherit;
+        margin: 26px 0 0;
+        background-size: 36px auto;
+    }
+    .slider-loc span {
+        font-size: 14px;
+    }
+    .slider-data{
+        margin-top: 10px;
+    }
+    .footer-bar{
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+    }
+    .stydy-item, .laborat-item, .additional-item{
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    .stydy-item img{
+        width: 100%;
+        height: auto;
+    }
+    .title {
+        font-size: 40px;
+        padding: 20px 0 30px;
+    }
+    .stady-title, .laborat-title, .additional-title, .related-name, .dev .related-name{
+        font-size: 23px;
+        margin-bottom: 15px;
+        margin-top: 10px;
+    }
+    .laborat-item{
+        padding-right: 0;
+    }
+    .laborat-title:after, .additional-title:after, .related-name:after, .page-col-lab::after, .lyceum-col .page-col-lab::after{
+        margin: 1px 10px;
+    }
+    .masters-item {
+        width: 50%;
+        padding-right: 10px;
+    }
+    .masters-details{
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        -webkit-box-pack: inherit;
+        -ms-flex-pack: inherit;
+        justify-content: inherit;
+    }
+    .masters-details-sidebar, .masters-details-info{
+        width: 100%;
+    }
+    .masters-details-sidebar {
+        padding: 20px;
+    }
+     .masters-details-info{
+        padding: 0 20px 40px 20px;
+    }
+    .masters-details-name {
+        font-size: 28px;
+        padding: 40px 0 37px;
+    }
+    .masters-details-history {
+        padding-bottom: 20px;
+        font-size: 14px;
+    }
+    .masters-details .related-item{
+        width: 100%;
+        padding-right: 10px;
+        margin-bottom: 10px;
+    }
+    .related-photo img{
+        width: 100%;
+        height: auto;
+    }
+    .page-sidebar-logo img{
+        width: 100%;
+        height: auto
+    }
+    .masters-details {
+        width: 92%;
+        border-radius: 4px;
+    }
+    .masters-name{
+        font-size: 14px;
+    }
+    .related-photo{
+        height: auto;
+    }
+    .laborat-item p, .additional-item p, .related-decpr{
+        font-size: 14px;
+    }
+    .footer-adress {
+        width: 90%;
+    }
+    .title-page h1 {
+        font-size: 29px;
+        line-height: 1.1;
+        padding-top: 30px;
+    }
+    .page{
+        -webkit-box-pack: inherit;
+        -ms-flex-pack: inherit;
+        justify-content: inherit;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+        flex-direction: column-reverse;
+    }
+    .page.menu-reserve{
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+    }
+    .page.menu-reserve .page-sidebar{
+        margin-bottom: 20px;
+        padding-top: 0;
+    }
+    .page-sidebar{
+        width: 100%;
+        padding-top: 0;
+    }
+    .page-content, .page-content.kurs{
+        width: 100%;
+    }
+    .page-main-text {
+        font-size: 21px;
+    }
+    .page-cont-img img{
+        width: 100%;
+        height: auto;
+    }
+    .page-small-text {
+        font-size: 15px;
+        line-height: 1.4;
+    }
+    .class .left-slide, .class .right-slide {
+        top: 17%;
+        -webkit-transform: scale(.7);
+        -ms-transform: scale(.7);
+        transform: scale(.7);
+    }
+    .title-page p {
+        font-size: 21px;
+        margin-top: 18px;
+    }
+    .page-thumb{
+        height: auto;
+    }
+    .page-col, .page-sidebar-main {
+        padding-left: 34px;
+    }
+    .teachers{
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    }
+    .teachers-item{
+        width: 49%;
+        padding-right: 10px;
+        margin-bottom: 15px;
+    }
+    .teachers-photo {
+        height: 102px;
+        max-height: 102px;
+    }
+    .teachers-name, .teachers-special{
+        font-size: 14px;
+        margin: 5px 0;
+    }
+    .teachers-photo img {
+        height: 100%;
+        width: 100%;
+        object-fit: contain;
+    }
+    .page-col p.date-name {
+        font-size: 21px;
+    }
+    .page-col p {
+        margin-top: 15px;
+    }
+    .teachers{
+        margin-top: 15px;
+    }
+    .page-sidebar .page-menu{
+        height: auto;
+        padding-top: 20px;
+    }
+    .sign{
+        display: block;
+        margin: 30px auto 0;
+    }
+    .page-col h3::before {
+        width: 20px;
+    }
+    .lyceum-col .page-col h3::before{
+        top: 14px;
+    }
+    .title-page-small {
+        margin-top: 0;
+    }
+    .related-item{
+        width: 100%;
+        margin-bottom: 30px;
+        padding-right: 0;
+    }
+    .page-sidebar-row .name{
+        font-weight: 600;
+    }
+    .related-arrow{
+        margin: 0 0 30px;
+        -webkit-transform: scale(.8);
+        -ms-transform: scale(.8);
+        transform: scale(.8);
+    }
+    .page-sidebar-logo{
+        padding: 0;
+        height: auto;
+    }
+    .title-page h1 b {
+        color: #b49fa7;
+        font-style: normal;
+        font-size: 22px;
+    }
+    .page-menu ul li a {
+        font-size: 18px;
+        margin-bottom: 5px;
+    }
+    .page-col p, .page-sidebar-row{
+        font-size: 14px;
+    }
+    .page-sidebar-row{
+        margin-top: 5px;
+        margin-bottom: 20px;
+    }
+    .page-doc li {
+        font-size: 15px;
+    }
+    .teachers-photo {
+        margin-right: 0;
+    }
+    .social-var a {
+        font-size: 30px;
+    }
+    .social-con .close, .modal .close{
+        -webkit-transform: scale(.7);
+        -ms-transform: scale(.7);
+        transform: scale(.7);
+    }
+    .parallax-arrow{
+        margin-bottom: 30px;
+        margin-top: 20px;
+        background-size: 36px auto;
+    }
+    .parallax p{
+        font-size: 21px;
+        margin-top: 145px;
+        margin-bottom: 0;
+    }
+    .masters-details-photo{
+        margin: 0 auto;
+        text-align: center;
+        height: 100px;
+    }
+    .masters-details-sidebar img {
+        width: auto;
+        height: 100%;
+    }
+    .form{
+        -webkit-box-pack: inherit;
+        -ms-flex-pack: inherit;
+        justify-content: inherit;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+    }
+    .form-content{
+        width: 100%;
+        margin-bottom: 25px;
+    }
+    .form-row{
+        width: 100%;
+    }
+    .form-title {
+        font-size: 18px;
+        margin-bottom: 20px;
+    }
+    .form-row input, .form-row select {
+        font-size: 14px;
+    }
+    .form-row select option {
+        font-size: 14px;
+    }
+    .sitemap{
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        padding-top: 0;
+        margin-bottom: 30px;
+    }
+    .sitemap-col{
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+    .footer-social{
+        margin: 20px 0;
+    }
+    .footer-adress .arrow-right{
+
+    }
+    .title i {
+        font-size: 21px;
+        margin-right: 10px;
+    }
+    .header-menu-col a{
+        font-size: 14px;
+        margin-bottom: 4px;
+        display: block;
+    }
+    .header-menu-col h3{
+        font-size: 14px;
+        padding-bottom: 13px;
+    }
+    .header-menu .title {
+        padding-top: 10px;
+        padding-bottom: 20px;
+    }
+    .main .left-slide, .main .right-slide {
+        -webkit-transform: scale(.7);
+        -ms-transform: scale(.7);
+        transform: scale(.7);
+    }
+    .main .left-slide{
+        left: 10px;
+    }
+    .main .right-slide{
+        right: 10px;
+    }
+    .header-social a, .header-lang a {
+        font-size: 12px;
+    }
+    .header-social a::after{
+        -webkit-transform: scale(.7);
+        -ms-transform: scale(.7);
+        transform: scale(.7);
+        margin-left: 2px;
+    }
+    .title-page.dev-title{
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+    .dev .title{
+        padding-bottom: 0;
+    }
+    .dev-arch{
+        margin-bottom: 10px;
+    }
+    .dev-nav{
+        display: flex;
+        flex-wrap: wrap;
+        margin-bottom: 15px;
+    }
+    .dev-link {
+        margin-right: 10px;
+    }
+    .dev .related-item {
+        padding-right: 20px;
+    }
+    .select label.error {
+        bottom: 0;
+    }
+    .politika, .success-form{
+        width: 90%
+    }
+}
+@media screen and (orientation: landscape) and (min-width: 768px) and (max-width: 1024px) {
+    .stydy-item{
+        width: 30%;
+        margin-right: 20px;
+    }
+    .stydy-item img{
+        width: 100%;
+    }
+}
+@media screen and (orientation: landscape) and (max-width : 767px) {
+    .stydy-item, .laborat-item, .additional-item{
+        width: 50%;
+        padding-right: 20px;
+    }
+    .masters-details-info{
+        overflow: auto;
+    }
+    .masters-details{
+        overflow: auto;
+    }
+    .masters-details {
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+        flex-direction: row;
+    }
+    .masters-details-sidebar{
+        width: 40%;
+    }
+    .masters-details-info{
+        width: 60%;
+    }
+    .teachers-item{
+        width: 33%
+    }
+    .related-item {
+        width: 49%;
+    }
+    .teachers-photo {
+        margin-right: 0;
+    }
+    .header-menu-map {
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+        flex-direction: row;
+    }
+    .header-menu-col{
+        width: 36%;
+    }
+    .header-menu .footer-bar {
+        padding-top: 30px;
+        padding-bottom: 0;
+    }
+    .title-page.dev-title{
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .dev .title{
+        padding-bottom:  30px;
+    }
+    .title-page h1 b.full-height {
+        height: 55px;
+    }
+}
+
+
+@media only screen and (max-width : 590px)  {
+    .parallax h1{
+        margin: 33px 0 50px;
+    }
+}
+
+@media only screen and (max-width : 390px) {
+    .masters-name{
+        min-height: 33px;
+    }
+
+}

@@ -1,0 +1,78 @@
+/*.entry-header h1 {
+    font-family: 'Dala Floda', sans-serif;
+}
+
+h2.with-line {
+    font-family: 'GoshaSans', monospace;
+}
+
+.with-line::before {
+    content: "";
+    position: absolute;
+    left: -60px;
+    top: 0.55em;
+    height: 3px;
+    width: 40px;
+    background: black;
+}
+
+.info-program {
+    top: 10vh;
+}
+
+.teachers {
+    font-size: small;
+    font-weight: bold;
+}
+
+.entry-title:after {
+    content: '\02192';
+    color: white;
+    background-color: rgba(181,160,168,0.21);
+}
+
+.post-type-archive-program .entry-title:after {
+    content: '\02192';
+    color: #d3c4a7;
+    background-color: black;
+    padding: 0px 5px;
+}
+
+.teachers .item:not(:last-child):after,
+.edu-info .item:not(:last-child):after{
+    content: ',';
+}
+
+.info,
+p[class~='info'] {
+    font-size: small;
+    font-weight: bold;
+}
+
+.card-text.info {
+    line-height: 0.5em;
+}
+*/
+
+
+nav.header-menu-map .header-menu-col > li > a,
+ul.sitemap-col > li > a{
+    border-bottom: 2px solid #90949e;
+    margin-bottom: 13px;
+    padding-bottom: 13px;
+    cursor: default;
+}
+
+footer ul.sitemap-col > li > a{
+    border-bottom: 2px solid #000000;
+}
+
+ul.sitemap-col {
+    font-family: 'GoshaSans-Regular';
+    font-size: 14px;
+    width: 90%;
+    text-transform: uppercase;
+    margin-right: 60px;
+}
+
+
